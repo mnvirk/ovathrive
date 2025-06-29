@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OvaThrive Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f9f9f9, #ffeef2);
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb199);
+      color: white;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      width: 140px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .header-content {
+      max-width: 700px;
+    }
+
+    .header-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .header-content p {
+      font-size: 1.1rem;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .button {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .button:hover {
+      background: linear-gradient(to right, #e63973, #b43774);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #ffffffdd;
+      backdrop-filter: blur(5px);
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .content h2 {
+      color: #e63973;
+      font-size: 1.6rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .content p, .content ul {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .content ul {
+      padding-left: 20px;
+    }
+
+    canvas {
+      display: block;
+      margin: 30px auto;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 60px;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 10px;
+      }
+
+      header img {
+        margin-bottom: 15px;
+      }
+
+      .header-content h1 {
+        font-size: 2rem;
+      }
+
+      .button {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <img src="ovathrive.jpg" alt="OvaThrive Logo">
+    <div class="header-content">
+      <h1>OvaThrive Project</h1>
+      <p>Empowering Women’s Health, One Cycle at a Time</p>
+    </div>
+  </header>
+
+  <div class="button-group" data-aos="fade-up">
+    <a href="#pcos-info" class="button">Learn More</a>
+    <a href="your-pdf-file.pdf" class="button" download>Download PDF</a>
+    <a href="mailto:contact@ovathrive.com" class="button">Contact Us</a>
+  </div>
+
+  <div class="content" id="pcos-info" data-aos="fade-up">
+    <h2>What is PCOS? – A Detailed Explanation</h2>
+    <p>Polycystic Ovary Syndrome (PCOS) is a hormonal disorder that affects females...</p>
+
+    <h2>Understanding the Name</h2>
+    <p>Despite the name, “polycystic” does not mean multiple harmful cysts...</p>
+
+    <h2>Causes of PCOS</h2>
+    <ul>
+      <li><strong>Hormonal Imbalance:</strong> Increased androgens...</li>
+      <li><strong>Insulin Resistance:</strong> Leads to overproduction...</li>
+      <li><strong>Genetics:</strong> PCOS often runs in families.</li>
+      <li><strong>Lifestyle and Weight:</strong> Obesity can worsen...</li>
+    </ul>
+
+    <h2>Symptoms of PCOS</h2>
+    <ul>
+      <li>Irregular or missed periods</li>
+      <li>Excess hair growth (hirsutism)</li>
+      <li>Severe acne</li>
+      <li>Weight gain or difficulty losing weight</li>
+      <li>Thinning hair or hair loss</li>
+      <li>Dark patches on skin</li>
+      <li>Fertility problems</li>
+      <li>Mood swings or anxiety</li>
+    </ul>
+
+    <h2>Diagnosis</h2>
+    <p>PCOS is usually diagnosed if two of the following are present...</p>
+
+    <h2>Long-Term Health Risks</h2>
+    <ul>
+      <li>Type 2 diabetes</li>
+      <li>High blood pressure</li>
+      <li>Heart disease</li>
+      <li>Endometrial cancer</li>
+      <li>Sleep apnea</li>
+      <li>Infertility</li>
+    </ul>
+
+    <h2>Treatment and Management</h2>
+    <ul>
+      <li><strong>Lifestyle:</strong> Healthy diet, exercise...</li>
+      <li><strong>Medications:</strong> Birth control, Metformin...</li>
+      <li><strong>Cosmetic:</strong> Acne and hair removal...</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>PCOS affects a woman’s health and fertility, but it can be managed...</p>
+  </div>
+
+  <!-- 📊 PCOS Survey Graphs -->
+  <div class="content" data-aos="fade-up">
+    <h2 style="text-align:center;">PCOS Survey Insights</h2>
+    <canvas id="ageChart"></canvas>
+    <canvas id="symptomChart"></canvas>
+    <canvas id="diagnosisChart"></canvas>
+  </div>
+
+  <footer>
+    <p>© 2025 OvaThrive Project | Empowering Women’s Health, One Cycle at a Time</p>
+  </footer>
+
+  <!-- Animation & Chart Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Age Group Awareness Chart
+    new Chart(document.getElementById('ageChart').getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: ['15-20', '21-25', '26-30', '31-35', '36+'],
+        datasets: [{
+          label: 'Awareness (%)',
+          data: [40, 55, 70, 60, 45],
+          backgroundColor: '#ff7eb3'
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, max: 100 } }
+      }
+    });
+
+    // Symptom Chart
+    new Chart(document.getElementById('symptomChart').getContext('2d'), {
+      type: 'pie',
+      data: {
+        labels: ['Irregular Periods', 'Weight Gain', 'Acne', 'Hair Growth', 'Mood Swings'],
+        datasets: [{
+          label: 'Symptoms',
+          data: [30, 25, 20, 15, 10],
+          backgroundColor: ['#ff758c', '#ffa07a', '#f08080', '#ffc0cb', '#ff69b4']
+        }]
+      }
+    });
+
+    // Diagnosis Chart
+    new Chart(document.getElementById('diagnosisChart').getContext('2d'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Diagnosed', 'Undiagnosed'],
+        datasets: [{
+          data: [35, 65],
+          backgroundColor: ['#7b4397', '#dc2430']
+        }]
+      }
+    });
+  </script>
+
+</body>
+</html>

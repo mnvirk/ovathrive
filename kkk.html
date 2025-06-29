@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OvaThrive Project | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #8e44ad, #6c3483);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+    .header-left img {
+      height: 110px;
+      margin-right: 15px;
+      transition: transform 0.3s ease;
+    }
+    .header-left img:hover {
+      transform: scale(1.05);
+    }
+    .header-left .title {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-left h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .header-left p {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+    .exit-button {
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .exit-button:hover {
+      background-color: #c0392b;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #6c3483;
+      display: flex;
+      justify-content: center;
+      padding: 0.75rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: #ffffff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+    section:hover {
+      transform: translateY(-4px);
+    }
+    h2 { color: #6c3483; }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    footer {
+      background: #6c3483;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
+      .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .exit-button {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header data-aos="fade-down">
+    <div class="header-left">
+      <img src="ovathrive.jpg" alt="OvaThrive Logo" />
+      <div class="title">
+        <h1>OvaThrive Project</h1>
+        <p>Empowering Women’s Health, One Cycle at a Time</p>
+      </div>
+    </div>
+    <button class="exit-button" onclick="window.history.back()">Exit</button>
+  </header>
+
+  <nav data-aos="fade-up">
+    <a href="#about">About</a>
+    <a href="#pcos">What is PCOS?</a>
+    <a href="#symptoms">Symptoms</a>
+    <a href="#causes">Causes</a>
+    <a href="#diagnosis">Diagnosis</a>
+    <a href="#treatment">Treatment</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="about" data-aos="fade-right">
+      <h2>About the Project</h2>
+      <p>We are students of Class 12 from MAS Convent School, Jeon Wala, Faridkot. We – Manveer Kaur Cheema, Jasdeep Kaur, and Parmveer Kaur – have collaboratively worked on the 'OvaThrive Project' to spread awareness about PCOS (Polycystic Ovary Syndrome). This initiative aims to empower women by educating them about PCOS and guiding them toward healthier lives.</p>
+    </section>
+
+    <section id="pcos" data-aos="fade-left">
+      <h2>What is PCOS?</h2>
+      <p><strong>Polycystic Ovary Syndrome (PCOS)</strong> is a hormonal disorder affecting women of reproductive age. It is marked by irregular periods, excess male hormones (androgens), and polycystic ovaries. Common symptoms include weight gain, acne, hair thinning, and fertility issues.</p>
+      <p>PCOS is linked to insulin resistance and can lead to long-term risks like diabetes, heart disease, and endometrial cancer. Early diagnosis and lifestyle changes—like a healthy diet, exercise, and medical care—can help manage PCOS effectively.</p>
+    </section>
+
+    <section id="symptoms" data-aos="zoom-in">
+      <h2>Symptoms of PCOS</h2>
+      <ul>
+        <li>Irregular or absent periods</li>
+        <li>Excessive hair growth (Hirsutism)</li>
+        <li>Severe acne and oily skin</li>
+        <li>Weight gain and difficulty losing weight</li>
+        <li>Hair thinning (Androgenic alopecia)</li>
+        <li>Dark patches on skin (Acanthosis Nigricans)</li>
+        <li>Mood disorders: anxiety, depression</li>
+        <li>Sleep problems and sleep apnea</li>
+        <li>Infertility and pregnancy complications</li>
+      </ul>
+    </section>
+
+    <section id="causes" data-aos="fade-right">
+      <h2>Causes & Risk Factors</h2>
+      <ul>
+        <li>Insulin resistance</li>
+        <li>Hormonal imbalance</li>
+        <li>Genetics</li>
+        <li>Chronic low-grade inflammation</li>
+        <li>Obesity</li>
+      </ul>
+    </section>
+
+    <section id="diagnosis" data-aos="fade-left">
+      <h2>Diagnosis & Tests</h2>
+      <p>PCOS is diagnosed using the Rotterdam Criteria (2003). A woman must have two out of the following three:</p>
+      <ul>
+        <li>Irregular or absent periods</li>
+        <li>Signs of hyperandrogenism (clinical or biochemical)</li>
+        <li>Polycystic ovaries seen in ultrasound</li>
+      </ul>
+      <p>Other tests include blood tests (hormones, insulin, lipids), pelvic ultrasound, and thyroid or prolactin checks.</p>
+    </section>
+
+    <section id="treatment" data-aos="zoom-in-up">
+      <h2>Treatment Options</h2>
+      <ul>
+        <li><strong>Lifestyle Changes:</strong> Weight loss, low-glycemic diet, regular exercise</li>
+        <li><strong>Medications:</strong> Birth control pills, Metformin, anti-androgens, fertility drugs</li>
+        <li><strong>Other Therapies:</strong> Laser hair removal, ovarian drilling</li>
+      </ul>
+      <p>Managing PCOS involves long-term commitment to a healthy lifestyle and regular medical care.</p>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p><strong>MAS Convent School</strong><br>
+      Jeon Wala, Faridkot<br>
+      Project By: Manveer Kaur Cheema, Jasdeep Kaur & Parmveer Kaur</p>
+    </section>
+  </div>
+
+  <footer data-aos="fade-in">
+    &copy; 2025 OvaThrive Project. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
